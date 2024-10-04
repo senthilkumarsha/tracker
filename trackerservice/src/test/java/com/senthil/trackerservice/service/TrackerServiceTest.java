@@ -35,6 +35,18 @@ public class TrackerServiceTest {
 		assertEquals(t, trackerStub.get());		
 	}
 	
+	@Test
+	public void saveTrackerTest()
+	{
+		Tracker trackerStub = createTrackerStub().get();
+		when(trackerRepository.save(trackerStub
+				)).thenReturn(trackerStub);
+		Tracker t = trackerService.saveTracker(trackerStub);
+		assertEquals(t, trackerStub);
+	}
+	
+	
+	
 	private Optional<Tracker> createTrackerStub()
 	{
 		Tracker t = new Tracker();

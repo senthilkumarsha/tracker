@@ -1,7 +1,6 @@
 package com.senthil.trackerservice.entity;
 
 import java.util.Date;
-import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
